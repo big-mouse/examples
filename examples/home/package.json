@@ -1,0 +1,38 @@
+{
+  "name": "big-mouse-example-home",
+  "version": "0.0.1",
+  "description": "Big Mouse Example",
+  "author": "Zuri Pabon (@tsurshaddai)<zurisadai.pabon@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --config webpack.config.js --progress --colors"
+  },
+  "dependencies": {
+    "big-mouse": "*",
+    "big-mouse-particles": "*"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/big-mouse/examples"
+  },
+  "bugs": {
+    "url": "https://github.com/big-mouse/examples/issues"
+  },
+  "homepage": "https://big-mouse.github.io/examples",
+  "keywords": [
+    "big",
+    "data",
+    "mouse",
+    "visualizations",
+    "charting",
+    "demo"
+  ]
+}

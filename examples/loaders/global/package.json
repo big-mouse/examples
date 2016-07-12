@@ -1,0 +1,30 @@
+{
+  "name": "big-mouse-example-global-loader",
+  "version": "0.0.1",
+  "description": "Big Mouse Example",
+  "author": "Zuri Pabon (@tsurshaddai)<zurisadai.pabon@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+  },
+  "dependencies": {
+    "big-mouse": "*",
+    "big-mouse-particles": "*"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/big-mouse/examples"
+  },
+  "bugs": {
+    "url": "https://github.com/big-mouse/examples/issues"
+  },
+  "homepage": "https://big-mouse.github.io/examples",
+  "keywords": [
+    "big",
+    "data",
+    "mouse",
+    "visualizations",
+    "charting",
+    "demo"
+  ]
+}
