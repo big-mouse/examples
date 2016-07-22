@@ -1,5 +1,5 @@
 {
-  "name": "big-mouse-example-home",
+  "name": "bigmouse-example-home",
   "version": "0.0.1",
   "description": "Big Mouse Example",
   "author": "Zuri Pabon (@tsurshaddai)<zurisadai.pabon@gmail.com>",
@@ -9,8 +9,8 @@
     "start": "webpack-dev-server --config webpack.config.js --progress --colors"
   },
   "dependencies": {
-    "big-mouse": "*",
-    "big-mouse-particles": "*"
+    "bigmouse": "*",
+    "bigmouse-particles": "*"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",

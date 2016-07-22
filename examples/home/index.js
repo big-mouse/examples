@@ -1,6 +1,6 @@
 
-import BigMouse from 'big-mouse';
-import BigMouseParticles from 'big-mouse-particles';
+import BigMouse from 'bigmouse';
+import BigMouseParticles from 'bigmouse-particles';
 
 BigMouse.cheese({
 
