@@ -7,8 +7,8 @@
   "scripts": {
   },
   "dependencies": {
-    "big-mouse": "*",
-    "big-mouse-particles": "*"
+    "bigmouse": "*",
+    "bigmouse-particles": "*"
   },
   "devDependencies": {},
   "repository": {

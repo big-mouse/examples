@@ -1,93 +1,136 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <title>Big Mouse</title>
+    <link rel="icon" 
+          type="image/png" 
+                href="examples/home/assets/bigmouse.png">
     <style>
-        body {
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.1);
-            padding: 80px;
-        }
-        .last_posts{
-            margin-top: 30px;
-            position: absolute;
-            width: 290px;
-            text-align: left;
-            background-color: #FFF8DC;
-            border: 1px solid #E0DCBF;
-            vertical-align: middle;
-            margin-left: 20px;
-        }
-        .last_posts p  {
-
-            text-align: left;
-            margin: 15px;
-            border-bottom: 1px solid rgba(0,0,0,0.2);
-        }
-        .last_posts p span {
-
-            font-size: 11px;
-            color: #9C988B;
-            text-transform: uppercase;
-            position: relative;
-            top: -5px;
-            font-family: sans-serif;
-        }
-        .last_posts ul {
-
-            list-style: none;
+        html, body {
             margin: 0;
-            padding: 0 20px;
-            margin-bottom: 16px;
+            padding: 0;
         }
-        .last_posts ul li{
-
-            padding:8px 0;
-            font-weight: normal;
-            font-size: 13px;
+        .header {
+            background-color: #ffc967;
+            text-align: center;
         }
-        .last_posts ul li a{
-
-            text-decoration: none;
-            color: #005999;
+        .logo {
+            padding-top: 70px;
+            height: 85px;
+            position: relative;
+            right: 30px;
+        }
+        .logo p {
+            font-family: Bangers;
+            font-size: 105px;
+            color: #FFF;
+            margin: 0;
+            z-index: 100;
+            display: inline;
+        }
+        .logo p span {
+            color: #347be7;
+        }
+        .logo img {
+            width: 98px;
+            height: 90px;
+            position: relative;
+            left: 12px;
+            display: inline;
+            transform: rotate(10deg);
+            z-index: 10;
+        }
+        .divider {
+            border-color: #ffc967;
+            height: 44px;
+            background: url(examples/home/assets/border.png) repeat-x 0 0;
         }
         .description{
-             float: right;
-             width: calc(100% - 380px);
-             margin: 0 30px;
-             margin-top: 35px;
-             vertical-align: middle;
-             font-size: 13px;
-             color: rgba(0,0,0,0.7);
-             text-align: justify;
+            font-family: Bangers;
+            color: #3a3a3a;
+            font-size: 25px;
+            width: 80%;
+            margin: 40px auto;
+        }
+        .demo {
+            margin-top: -40px;
+            padding-bottom: 44px;
+        }
+        .demo .posts {
+            border: solid 5px #f2b52c;
+            background-color: #FFF;
+            width: 80%;
+            height: 190px;
+            margin: auto;
+            padding-bottom: 44px;
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .demo .posts ul {
+            list-style: none;
+            margin:0;
+            padding:0;
+            overflow: hidden;
+            position: relative;
+            top: 110px;
+            display: inline-block;
+        }
+        .demo .posts ul li {
+
+            float: left;
+            display: inline-block;
+            margin: 0 15px;
+            margin-bottom: 20px;
+        }
+        .demo .posts ul li a {
+            text-decoration: none;
+            color: #3a3a3a;
+            font-size: 25px;
+            font-family: Bangers;
+        }
+        .demo .posts ul li a:hover{
+            color: #999;
+        }
+        .demo .hint {
+            width: 214px;
+            height: 59px;
+            border-radius: 29.5px;
+            background-color: #ffc967;
+            border: solid 5px #f2b52c;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            top: 35px;
+           }
+        .demo .hint p {
+            font-family: Bangers;
+            color: #3a3a3a;
+            font-size: 22px;
+        }
+        .content {
+            text-align:center;
+            font-size: 14px;
+            width: 80%;
+            margin: 30px auto;
+        }
+        .content p {
+            color: rgba(0,0,0,0.7);
+            text-align: justify;
             font-family: "Roboto", sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-         }
-        .description ul{
-            list-style: none;
         }
-        .description a {
+        .content p a{
             text-decoration: none;
-            font-weight: bold;
-            color: rgba(0,0,0,0.7);
+            color: #005999;
         }
-        .logo{
-            position: absolute;
-            top: -70px;
-            z-index: -1;
-            transform: rotate(57deg);
-            /* float: left; */
-            left: 5px;
-        }
-        .logo img{
-            width:170px;
-        }
-        .made-with-love{
-            clear: both;
+      .made-with-love{
             font-size: 12px;
-            margin-left: 30px;
-            padding-top: 20px;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 40px;
             color: rgba(0,0,0,0.7);
             font-family: "Roboto", sans-serif;
             -webkit-font-smoothing: antialiased;
@@ -102,35 +145,41 @@
             color: #f99d9d;
         }
 
-    </style>
 
+    </style>
 </head>
 <body>
-<a href="https://github.com/big-mouse/core" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
-<div class="last_posts">
-    <div class="logo">
-        <img src="examples/home/assets/bigmouse.png" />
-    </div>
-    <p><span>Lastest Blog Posts</span></p>
-    <ul>
-        <li><a href="#" rel="example.blogspot.com/3">Customized Dashboard using Apache-Zeppelin</a></li>
-        <li><a href="#" rel="example.blogspot.com/2">Valo: a new streaming computation engine for real-time analytics</a></li>
-        <li><a href="#" rel="example.blogspot.com/1">How to run a configuration on a specific node in spark</a></li>
-        <li><a href="#" rel="example.blogspot.com/4">Practical usage of Hadoop in project</a></li>
-    </ul>
-</div>
-
-<div class="description">
-    <p><strong>Big Mouse</strong> is a small UI library aimed to extend the mouse capabilities by bringing big data right into the mouse cursor with useful and beautiful visualizations.</p>
-    <p>Here's a simple demo to highlight the possibilities of <strong>Big Mouse</strong>. Just move your mouse cursor right to the latest blog posts panel on the left. That's a traditional blog widget panel in which you may discover the list of latest blog entries posted by title. Once <strong>Big Mouse</strong> is enabled, the mouse cursor will be giving you extra information for each post as described below.</p>
-    <ul>
-        <li>Number of particles => Number of comments in post (more particles, more comments) </li>
-        <li>Radius of Particles =>  Post Reading time (the smaller, the faster to read)</li>
-        <li>Size of particles => Comments length (the bigger, the lengthy)</li>
-    </ul>
-    <p>The attributes were merely selected for demonstration purposes. Other many attributes could be used as they make more sense as particles speed, color, brightness, distortion, etc. We need contributors, <a href="https://github.com/big-mouse/core"><strong>join us</strong></a>!</p>
-</div>
-<div class="made-with-love">Made with <span>♥</span> by <a href="http://zuri.website">Zuri Pabón</a></div>
-<script src="examples/home/bundle.js"></script>
+   <section class="header">
+        <a target="_blank" href="https://github.com/big-mouse/core"><img style="position: absolute; top: 0; left: 0; border: 0; z-index:999;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub"
+       data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+        <div class="logo">
+            <img src="examples/home/assets/bigmouse.png" alt="Big Mouse">
+            <p><span>BIG</span> MOUSE</p>
+        </div>
+        <div class="description">
+            <p>A small UI library aimed to extend the mouse capabilities by bringing big data right into the mouse cursor with useful and beautiful visualizations</p>
+        </div>
+        <div class="demo">
+            <div class="hint"><p>Hover Links!</p></div>
+            <div class="posts">
+                <ul>
+                    <li><a href="#" rel="example.blogspot.com/1">Example 1</a></li>
+                    <li><a href="#" rel="example.blogspot.com/3">Example 2</a></li>
+                    <li><a href="#" rel="example.blogspot.com/2">Example 3</a></li>
+                    <li><a href="#" rel="example.blogspot.com/4">Example 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <section class="content">
+        <p>Above's a simple demo to highlight the possibilities of <strong>Big Mouse</strong>. Just hover the links in the panel above with the mouse cursor. Imagine that's a traditional blog widget panel in which you may discover the list of latest blog entries posted by title. Once <strong>Big Mouse</strong> is enabled, the mouse cursor will be giving you extra information for each post in the panel as described below. Imagine for instance that particles in red are comments marked
+        as spam.</p>
+        <p>Number of particles: Number of comments in post (more particles, more comments) </p>
+        <p>Color of particles: Amount of different users commenting the post (the more colors, the more users)</p>
+        <p>The attributes were merely selected for basic demonstration purposes. Other many attributes could be used to reference other interesting/valuable variables in your application domain as they make more sense as for instance particles size, speed, color, brightness, distortion, radius, etc. Particles system is actually a plugin, so you could interchange it with other puglins displaying different animations or interactive charts. We need contributors, <a href="https://github.com/big-mouse/core"><strong>join us</strong></a>!</p>
+    </section>
+    <div class="made-with-love">Made with <span>♥</span> by <a target="_blank" href="http://zuri.website">Zuri Pabón</a></div>
+    <script src="examples/home/bundle.js"></script>
 </body>
 </html>
